@@ -21,9 +21,9 @@ spec:
         image: sanderknape/github-runner:latest
         env:
         - name: GITHUB_OWNER
-          value: warolv
+          value: narayanareddy11
         - name: GITHUB_REPOSITORY
-          value: github-actions-series
+          value: setup-k8s-runner
         - name: RUNNER_LABELS
           value: self-hosted-runner
         - name: GITHUB_PAT
