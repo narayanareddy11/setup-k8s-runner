@@ -2,11 +2,11 @@ name: Redeploy nginx after changes in deployment.yaml
 on:
   push:
     paths:
-      - nginx/**
+      - nginx/**    # Run the workflow when changes are pushed to the nginx directory
 
 jobs:
   redeploy-nginx:
-    runs-on: self-hosted-runner
+    runs-on: self-hosted-runner  # This job runs on the self-hosted runner
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -14,5 +14,7 @@ jobs:
           node-version: '14'
       - name: Redeploy nginx
         run: |
-          kubectl apply -f nginx/deployment.yaml
+          kubectl apply -f nginx/deployment.yaml         # Apply the changes in the deployment.yaml file
+          kubectl rollout status deployment/my-nginx     # Wait for the rollout to complete
+          kubectl get pods                               # Get the pods to verify the rollout
      
