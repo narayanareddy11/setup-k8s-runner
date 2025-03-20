@@ -29,8 +29,8 @@ spec:
         - name: GITHUB_PAT
           valueFrom:
             secretKeyRef:
-              name: gh-pat
-              key: pat
+              name: github-token
+              key: TOKEN
         lifecycle:
           postStart:
             exec:
