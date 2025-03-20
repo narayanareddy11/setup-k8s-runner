@@ -49,7 +49,7 @@ Clone the repository using the following command:
 1. Ensure you have `kubectl` installed and configured to interact with your Kubernetes cluster.
 2. Navigate to the directory containing your Kubernetes manifests:
     ```bash
-    cd /home/narayana/Desktop/setup-k8s-runner-1
+    cd /home/narayana/Desktop/setup-k8s-runner
     ```
 3. Apply the manifests to deploy the runner:
     ```bash
@@ -63,9 +63,8 @@ Clone the repository using the following command:
     ```bash
     kubectl logs <runner-pod-name>
     ```
-6. Confirm that the runner is active in your GitHub repository under **Settings** > **Actions** > **Runners**.
 
-### 6. Verify the Runner Registration in Kubernetes
+### 6. Verify the Runner Registration in Github
 1. After applying the changes, navigate to your GitHub repository.
 2. Go to **Settings** > **Actions** > **Runners**.
 3. Verify that the Kubernetes runner is listed as an active runner.
