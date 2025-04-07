@@ -30,7 +30,6 @@ Clone the repository using the following command:
       TOKEN: "your-new-base64-encoded-value"
 
     ```
-
 ### 4. Update GitHub Username and Repository Name Secret in `ge-deployment.yaml`
 1. Open the `ge-deployment.yaml` file in your preferred text editor.
 2. Locate the section where the GitHub username and repository name secrets are defined.
